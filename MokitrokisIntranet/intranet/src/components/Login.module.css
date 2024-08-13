@@ -1,0 +1,10 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 50vw;
+    height: 25vh;
+    align-items: center;
+    justify-content: center;
+
+}

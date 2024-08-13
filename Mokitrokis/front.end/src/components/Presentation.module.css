@@ -1,0 +1,22 @@
+@media screen and (min-width: 300px) and (max-width: 915px) {
+    .contenedor,
+    .reservas {
+        min-width: 95vw;
+        height: 50vh;
+    }
+
+    .presentacion {
+        max-height: 50vh;
+        width: 100vw;
+    }
+}
+
+.presentacion {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    width: 70vw;
+    height: 100vh;
+}
+

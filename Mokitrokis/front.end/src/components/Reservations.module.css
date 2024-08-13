@@ -1,0 +1,45 @@
+@media screen and (min-width: 400px) and (max-width: 915px) {
+    
+    .formContainer, input,
+     textarea,
+    .react-datepicker-wrapper {
+        min-width: 95vw;
+    }
+
+}
+
+
+
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 60vw; /* Corregir para que solo haya una declaración de width */
+    margin: 20px auto;
+    color: white; /* Texto blanco para el modo oscuro */
+}
+
+.formContainer h1 {
+    text-align: center;
+}
+
+.formContainer input,
+.formContainer textarea,
+.formContainer .react-datepicker-wrapper {
+    display: flex;
+    flex-grow: 2;
+    width: 60vw;
+    height: 5vh;
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: inset black;
+    margin-bottom: 10px;
+}
+
+.formContainer textarea {
+    resize: none; /* Permitir redimensionar solo verticalmente */
+    min-height: 100px;
+}

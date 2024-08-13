@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegurar que el body y html ocupen el 100% de la altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    background-color: black;
+    color: white;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%;
+    height: 100%; /* Asegurar que #root ocupe el 100% de la altura */
+}
+
+h1, h3 {
+    font-family: 'miFuente';
+    margin: 0.5em 0;
+    text-align: center;
+}
+
+button {
+    background: none; /* Eliminar fondo */
+    border: none; /* Eliminar borde */
+    padding: 0; /* Eliminar padding */
+    cursor: pointer; /* Añadir cursor pointer para mejor UX */
+    font-family: 'miFuente';
+    font-size: large;
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.3);
+}
+
+/* Estilos para modo oscuro */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/* Estilos para modo claro */
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.light-mode input, .light-mode textarea {
+    background: transparent;
+    color: black;
+    font-weight: bold;
+}
+
+.light-mode h1{
+    color: black;
+}
+
+.dark-mode h1{
+    color: white;
+}
+
+input, textarea {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+}
+
+td {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.light-mode td {
+    color: black;
+}
+
+.dark-mode td {
+    color: white;
+}
+
+
+.light-mode button {
+    color: black;
+}
+
+.dark-mode button {
+    color: white;
+}
+
+
+#logotipo.light-mode{
+    background-image: url('./components/media/logoMokitrokis-Light.png');
+}
+
+#logotipo.dark-mode{
+    background-image: url('./components/media/LogoMokitrokis.png');
+}
