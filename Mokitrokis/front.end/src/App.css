@@ -6,8 +6,8 @@ body {
     flex-direction: column;
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
-    background-color: black;
-    color: white;
+    /*background-color: black;
+    color: white;*/
 }
 
 #root {

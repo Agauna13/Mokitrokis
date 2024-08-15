@@ -1,6 +1,0 @@
-.dashboard{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    align-content: space-evenly;
-    color: white;
-}

@@ -1,27 +1,22 @@
+// backend/server.js
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-
-
-//import de las rutas para el CRUD
-const dataRoute = require('./routes/data');
-const insertarRoute = require('./routes/insertar');
-const borrarRoute = require('./routes/borrar');
-const updateRoute = require('./routes/update');
+const itemRoutes = require('./routes/itemRoutes');
+const reservaRoutes = require('./routes/reservaRoutes'); // Importar las rutas de reservas
+require('dotenv').config();
 
 const app = express();
+const PORT = process.env.PORT || 3500;
+
+// Middlewares
 app.use(cors());
 app.use(bodyParser.json());
 
-// Usamos las rutas
-app.use('/api', dataRoute);
-app.use('/api', insertarRoute);
-app.use('/api', borrarRoute);
-app.use('/api', updateRoute);
+// Rutas
+app.use('/api', itemRoutes);
+app.use('/api', reservaRoutes); // Usar las rutas de reservas
 
-
-//conexión al puerto
-const PORT = process.env.PORT || 6000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });

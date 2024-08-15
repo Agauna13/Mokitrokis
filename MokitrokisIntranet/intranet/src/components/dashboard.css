@@ -1,0 +1,13 @@
+.reservas-container{
+    width: 98vw;
+
+}
+
+
+
+.reserva-item{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-bottom: 2px dashed;
+    
+}

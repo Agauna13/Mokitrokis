@@ -1,21 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../config/db');
+const insertarDb = require('../db/insertar'); // Aquí cargas la conexión específica para inserción
 
-
-// Ruta para insertar datos en la base de datos
-router.post('./insertar', (req, res) => {
+router.post('/insertar', (req, res) => {
     const { nombre, telefono, fecha, hora, personas, comentarios } = req.body;
     
     const sql = 'INSERT INTO reservas (nombre, telefono, fecha, hora, personas, comentarios) VALUES (?, ?, ?, ?, ?, ?)';
     
-    db.query(sql, [nombre, telefono, fecha, hora, personas, comentarios], (err, result) => {
+    insertarDb.query(sql, [nombre, telefono, fecha, hora, personas, comentarios], (err, result) => {
         if (err) {
-            console.error('Error al insertar los datos:', err);
-            res.status(500).send('Error en el servidor');
-            return;
+            res.status(500).json({ error: err.message });
+        } else {
+            res.json({ message: 'Datos insertados correctamente', result });
         }
-        res.status(200).json({ message: 'Datos insertados correctamente', result });
     });
 });
 

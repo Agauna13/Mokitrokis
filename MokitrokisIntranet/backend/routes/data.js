@@ -1,16 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../config/db');
+const db = require('../db/connection'); // Aquí cargas la conexión general o un archivo específico de conexión
 
-// Ruta para obtener datos de la base de datos
-router.get('./data', (req, res) => {
-    db.query('SELECT * FROM reservas', (err, results) => {
+router.get('/data', (req, res) => {
+    db.query('SELECT * FROM tabla', (err, results) => {
         if (err) {
-            console.error('Error al realizar la consulta:', err);
-            res.status(500).send('Error en el servidor');
-            return;
+            res.status(500).json({ error: err.message });
+        } else {
+            res.json(results);
         }
-        res.json(results);
     });
 });
 

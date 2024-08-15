@@ -1,22 +1,21 @@
+// backend/config/db.js
 const mysql = require('mysql2');
-const dotenv = require('dotenv');
+require('dotenv').config();
 
-dotenv.config(); // Cargar variables de entorno
-
-const db = mysql.createConnection({
-    host: process.env.DB_HOST || 'localhost',
-    port: process.env.DB_PORT || 3312,
+const connection = mysql.createConnection({
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
 });
 
-db.connect((err) => {
+connection.connect((err) => {
     if (err) {
-        console.error('Error al conectar a la base de datos:', err);
+        console.error('Error connecting to the database:', err.stack);
         return;
     }
-    console.log('Conexión a la base de datos exitosa');
+    console.log('Connected to the database');
 });
 
-module.exports = db;
+module.exports = connection;

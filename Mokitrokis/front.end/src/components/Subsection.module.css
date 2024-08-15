@@ -4,12 +4,12 @@
 .menuTable {
     width: 100%;
     border-collapse: collapse;
-    padding: 5PX;
-    margin: 0 auto; /* Centra la tabla */
+    /*padding: 10PX;
+    margin: 0 auto;  Centra la tabla */
 }
 
 .menuTable tr {
-    border-bottom: 1px dotted WHITE;
+    border-bottom: 2px dashed;
 }
 
 .itemName {
@@ -20,4 +20,9 @@
 .itemPrice {
     text-align: right;
     width: 30%;
+}
+
+
+.itemName, .itemPrice{
+    font-weight: bold;
 }

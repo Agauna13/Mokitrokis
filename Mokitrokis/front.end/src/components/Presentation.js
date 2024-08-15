@@ -5,6 +5,7 @@
     const Presentation = () => {
         return (
             <div className={styles.presentacion} id="logotipo">
+
             </div>
         );
     };

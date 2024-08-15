@@ -22,7 +22,7 @@ const UsuariosComponent = () => {
             }
             alert(authentication);
             const response = await axios.post(
-                'http://localhost:5000/login',
+                'http://localhost:6000/login',
                 authentication
             );
             
@@ -36,7 +36,7 @@ const UsuariosComponent = () => {
 
     const fetchUsuarios = async() => {
         try {
-            const response = await axios.get('http://localhost:5000/usuarios');
+            const response = await axios.get('http://localhost:6000/usuarios');
             setUsuarios(response.data);
         } catch (error){
             console.log('Error fetching usuarios: ', error);
