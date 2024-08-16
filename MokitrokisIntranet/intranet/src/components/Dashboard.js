@@ -20,17 +20,28 @@ const Dashboard = () => {
 
     return (
         <div>
+            
             <h2>Dashboard</h2>
             <div className="reservas-container">
+                <div className='cabeceraTabla'>
+                    <h2>ID</h2>
+                    <h2>Nombre</h2>
+                    <h2>Teléfono</h2>
+                    <h2>Fecha</h2>
+                    <h2>Hora</h2>
+                    <h2>Nº Comensales</h2>
+                    <h2>Comentarios</h2>
+
+                </div>
                 {reservas.map(reserva => (
                     <div key={reserva.id} className="reserva-item">
-                        <p>ID: {reserva.id}</p>
-                        <p>Nombre: {reserva.nombre}</p>
-                        <p>Teléfono: {reserva.telefono}</p>
-                        <p>Fecha: {reserva.fecha}</p>
-                        <p>Hora: {reserva.hora}</p>
-                        <p>Personas: {reserva.personas || 'No especificado'}</p>
-                        <p>Comentarios: {reserva.comentarios || 'Sin comentarios'}</p>
+                        <p>{reserva.id}</p>
+                        <p>{reserva.nombre}</p>
+                        <p>{reserva.telefono}</p>
+                        <p>{reserva.fecha}</p>
+                        <p>{reserva.hora}</p>
+                        <p>{reserva.personas || 'No especificado'}</p>
+                        <p>{reserva.comentarios || 'Sin comentarios'}</p>
                     </div>
                 ))}
             </div>

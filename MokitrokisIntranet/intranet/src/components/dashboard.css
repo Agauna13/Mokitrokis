@@ -1,13 +1,14 @@
 .reservas-container{
-    width: 98vw;
+    width: 95vw;
 
 }
 
 
 
-.reserva-item{
+.reserva-item, .cabeceraTabla{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     border-bottom: 2px dashed;
+
     
 }
