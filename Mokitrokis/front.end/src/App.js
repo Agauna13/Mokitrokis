@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { GiReturnArrow } from "react-icons/gi";
+import { TfiBackLeft } from "react-icons/tfi";
 import Header from './components/Header';
 /*import Presentation from './components/Presentation';*/
 import TarjetaComidas from './components/TarjetaComidas';
@@ -85,20 +85,19 @@ const App = () => {
                     <div className="menu-container">
                         {activeMenu === 'comidas' && <MenuComidas />}
                         {activeMenu === 'bebidas' && <MenuBebidas />}
-                        <button className="back-button" onClick={showTarjetas}>Volver <GiReturnArrow /></button>
+                        <button className="back-button" onClick={showTarjetas}>Volver <TfiBackLeft /></button>
                     </div>
                 )}
             </div>
-            <Footer />
         </div>
     );
 
-    return (
+    /*return (
         <>
 
 
         </>
-    );
+    );*/
 };
 
 export default App;

@@ -8,6 +8,6 @@
     align-items: center; /* Asegurar que los elementos estén centrados verticalmente */
     background: transparent;
     width: 100vw; /* Cambiar 100vh a 100vw para abarcar el ancho completo */
-    height: 15vh;
+    height: 11vh;
     z-index: 5;
 }

@@ -9,7 +9,7 @@
 }
 
 .menuTable tr {
-    border-bottom: 2px dashed;
+    border-top: 2px dashed;
 }
 
 .itemName {
@@ -25,4 +25,5 @@
 
 .itemName, .itemPrice{
     font-weight: bold;
+    padding-bottom: 3vh;
 }
