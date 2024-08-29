@@ -1,19 +1,7 @@
-@media screen and (min-width: 400px) and (max-width: 915px) {
-    .contenedor,
-    .mostrar {
-        min-width: 100vw;
-        
-
-    }
-
-}
-
-
-
 .contenedor {
     display: none;
     overflow: hidden;
-    text-align: justify;
+    text-align: center;
     width: 40vw;
     background-color: inherit;
 }
@@ -37,9 +25,33 @@
 
 .desplegables {
     /*background-color: transparent;*/
+    display: flex;
+    flex-direction: column ;
     z-index: 1;
+    text-align: center;
+    font-size: 1.3vw;
 }
 
 .numero {
     cursor: pointer;
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 1024px) {
+    .contenedor,
+    .mostrar {
+        min-width: 95vw;
+    }
+
+    .numero{
+        font-size: 5vw;
+    }
+    tr, td{
+        font-size: 3vw;
+    }
+
+    button{
+        font-size: 3vw;
+    }
+
 }

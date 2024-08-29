@@ -1,0 +1,13 @@
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 2vw;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
